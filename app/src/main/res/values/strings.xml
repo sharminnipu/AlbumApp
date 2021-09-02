@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AlbumApp</string>
+    <string name="empty_msg">Album is empty</string>
+</resources>

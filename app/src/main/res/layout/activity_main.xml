@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"/>
+        <LinearLayout
+            android:id="@+id/emptyMsg"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/image"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/empty_msg"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:id="@+id/loaderAlbum"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+
+        <LinearLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_height="70dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/previousBtn"
+                    android:layout_width="55dp"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:background="@drawable/button_shape"
+                    android:src="@drawable/previous"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="40dp"/>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/nextBtn"
+                    android:layout_width="55dp"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_next"
+                   android:background="@drawable/button_shape"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="40dp"/>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</layout>
